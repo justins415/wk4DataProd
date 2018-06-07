@@ -10,10 +10,10 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       helpText("Create demographic maps with 
-               information from the 2010 US Census."),
+               information from the 2010 US Census.  Use the click down menus and the sliders to select the data to display."),
       
       selectInput("var1", 
-                  label = "Choose a variable to display",
+                  label = "Choose a variable to display:",
                   choices = c("Percent White", "Percent Black",
                               "Percent Hispanic", "Percent Asian"),
                   selected = "Percent White"),
@@ -23,10 +23,9 @@ ui <- fluidPage(
                   min = 0, max = 100, value = c(0, 100)),
       
     selectInput("var2", 
-                label = "Choose a variable to display",
-                choices = c("Percent White", "Percent Black",
-                            "Percent Hispanic", "Percent Asian"),
-                selected = "Percent White"),
+                label = "Choose a variable to display:",
+                choices = c("Percent Hispanic", "Percent Asian", "Percent White", "Percent Black"),
+                selected = "Percent Hispanic"),
     
     sliderInput("range2", 
                 label = "Range:",
