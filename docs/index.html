@@ -547,7 +547,7 @@ body {
 
 
 .reveal {
-  font-family: "Lato", sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
   
 .reveal h1,
@@ -556,7 +556,7 @@ body {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  font-family: "News Cycle", Impact, sans-serif;
+  font-family: 'Helvetica', Impact, sans-serif;
 }
 
 
@@ -787,6 +787,11 @@ hljs.initHighlightingOnLoad();
 <h1>Census visualization Shiny app presentation</h1><p>Week 4 assignment</p>
 
 <div class="slideContent" >
+<style>
+.small-code pre code {
+  font-size: 0.7em;
+}
+</style>
 
 </div>
 
@@ -807,7 +812,9 @@ hljs.initHighlightingOnLoad();
 </section>
 <section data-transition="linear" data-transition-speed="default">
 <h3>Examples of the source data</h3>
-<div class="slideContent" >
+<div class="slideContent small-code" >
+<p><small></p>
+
 <pre><code class="r">counties &lt;- readRDS(&quot;counties.rds&quot;)
 head(counties)
 </code></pre>
@@ -821,14 +828,22 @@ head(counties)
 6 alabama,bullock     10914  21.9  71.0      7.1   0.2
 </code></pre>
 
+<p></small></p>
+
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
 <h3>Examples of the distributions</h3>
-<div class="slideContent" >
+<div class="slideContent small-code" >
+<pre><code class="r">summary(counties$hispanic)
+</code></pre>
+
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
    0.00    1.60    3.20    8.33    8.10   95.70      37 
+</code></pre>
+
+<pre><code class="r">summary(counties$black)
 </code></pre>
 
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
